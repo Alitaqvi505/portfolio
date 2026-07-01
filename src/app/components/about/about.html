@@ -1,24 +1,89 @@
 <section class="about-section">
+
   <div class="about-container">
+
+    <!-- Left Image -->
     <div class="about-image">
-     
-      <img src="mamu.png" alt="Syed Zafar Abbas">
-
+      <img src="hasnain.png" alt="Ali Imran">
     </div>
 
+    <!-- Right Content -->
     <div class="about-text">
+
       <h1>About Me</h1>
-      <h2 class="name">Syed Zafar Abbas</h2>
+
+      <h2 class="name">Ali Imran</h2>
 
       <p>
-With over 15 years of expertise across Kuwait and UAE, I specialize in corporate tax, Zakat filing, dispute resolution, tax treaty relief, audit & assurance, and tax & business advisory services. My career reflects a proven ability to deliver measurable financial impact in complex regulatory environments.
+        I am a passionate Full Stack .NET Developer and aspiring AI Engineer with over
+        5 years of professional software development experience. I specialize in
+        ASP.NET Core, C#, Angular, SQL Server, REST APIs, and modern web technologies,
+        building scalable and secure enterprise applications.
+      </p>
+
       <p>
-My interests focus primarily on global tax compliance, navigating regulations, resolving disputes, and delivering strategies that drive financial impacts.      </p>
+        Throughout my career, I have contributed to enterprise solutions for
+        Telenor Pakistan and Systems Limited, working on microservices,
+        biometric verification systems, third-party integrations, and
+        business-critical applications. My work focuses on writing clean,
+        maintainable code and delivering high-quality software solutions.
+      </p>
 
+      <p>
+        I am currently expanding my expertise in Artificial Intelligence,
+        Agentic AI, Machine Learning, Retrieval-Augmented Generation (RAG),
+        and Large Language Models. My long-term vision is to build innovative
+        AI-powered SaaS products and establish a global software company.
+      </p>
 
-      <a class="btn-linkedin" href="https://www.linkedin.com/in/syedzafarabbas" target="_blank">
-        Connect on LinkedIn
-      </a>
+      <div class="about-buttons">
+
+        <a
+          class="btn-linkedin"
+          href="https://www.linkedin.com/in/ali-hasnain-0092311b3"
+          target="_blank">
+          Connect on LinkedIn
+        </a>
+
+      </div>
+
     </div>
+
   </div>
+
+</section>
+
+<!-- ================= AI SECTION ================= -->
+
+<section class="ai-section">
+
+    <h2>Ask AI About Me</h2>
+
+    <p class="ai-subtitle">
+        Ask anything about my skills, projects, experience, education or AI journey.
+    </p>
+
+    <div class="ai-container">
+
+        <input
+            [(ngModel)]="question"
+            class="ai-input"
+            placeholder="Example: Tell me about your experience..." />
+
+        <button
+            (click)="ask()"
+            class="ai-button">
+            Ask AI
+        </button>
+
+    </div>
+
+    <div *ngIf="loading" class="ai-response">
+        🤖 Thinking...
+    </div>
+
+    <div *ngIf="answer" class="ai-response">
+        {{ answer }}
+    </div>
+
 </section>

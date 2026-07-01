@@ -1,28 +1,62 @@
 <section class="projects-section">
+
   <div class="projects-header">
-    <h1>Professional Experience</h1>
-    <p>Some of my best work delivering strategic tax compliance, advisory, and dispute resolution across the GCC.</p>
+
+    <h1>Projects</h1>
+
+    <p class="projects-subtitle">
+      Each project represents a real-world solution, showcasing my ability
+      to design, develop, and deploy scalable, secure, and user-focused
+      software applications.
+    </p>
+
   </div>
 
   <div class="projects-grid">
-    <div class="project-card" *ngFor="let project of projects">
-      <div class="project-content">
-        <h2>{{ project.title }}</h2>
-        <p class="position">{{ project.position }}</p>
 
-        <p class="description">{{ project.description }}</p>
+    <div class="project-card" *ngFor="let project of projects">
+
+      <div class="project-content">
+
+        <h2>{{ project.title }}</h2>
+
+        <p class="position">
+          {{ project.position }}
+        </p>
+
+        <p class="description">
+          {{ project.description }}
+        </p>
 
         <div class="tech-stack">
-          <span *ngFor="let tech of project.techStack">{{ tech }}</span>
+
+          <span *ngFor="let tech of project.techStack">
+            {{ tech }}
+          </span>
+
         </div>
 
-        <!-- <div class="buttons">
-  <a *ngIf="project.image" href="#" target="_blank">
-    <img [src]="project.image" alt="Project Image" class="project-img">
-  </a>
-</div> -->
+        <div class="project-buttons">
+
+          <a
+            *ngIf="project.github"
+            [href]="project.github"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-btn">
+
+            <i class="fa-brands fa-github"></i>
+
+            <span>View on GitHub</span>
+
+          </a>
+
+        </div>
 
       </div>
+
     </div>
+
   </div>
+
 </section>

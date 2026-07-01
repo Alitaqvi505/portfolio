@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio": {
+    "portfolio1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio",
+            "outputPath": "dist/portfolio1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "zone.js",
@@ -50,17 +50,20 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "portfolio:build:production"
-            },
-            "development": {
-              "browserTarget": "portfolio:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
+  "builder": "@angular-devkit/build-angular:dev-server",
+  "options": {
+    "buildTarget": "portfolio1:build"
+  },
+  "configurations": {
+    "production": {
+      "buildTarget": "portfolio1:build:production"
+    },
+    "development": {
+      "buildTarget": "portfolio1:build:development"
+    }
+  },
+  "defaultConfiguration": "development"
+},
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },

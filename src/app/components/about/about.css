@@ -1,141 +1,329 @@
-.about-section {
-  background: linear-gradient(180deg, #111827 0%, #0b0c10 100%);
-  color: #f3f4f6;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about-section{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0b0e17,#101826,#0b0e17);
+    color:#fff;
+    padding:90px 8%;
+    display:flex;
+    align-items:center;
 }
 
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 1100px;
-  width: 100%;
-  gap: 60px;
-  animation: fadeIn 1.2s ease-in-out;
+.about-container{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:70px;
+    flex-wrap:wrap;
 }
 
-.about-image {
-  flex: 1 1 350px;
-  display: flex;
-  justify-content: center;
+/* ==========================================
+   PROFILE IMAGE
+========================================== */
+
+.about-image{
+    flex:0 0 340px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.about-image img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #60a5fa;
-  box-shadow: 0 0 25px rgba(96, 165, 250, 0.4);
-  transition: transform 0.4s ease;
+.about-image img{
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    /* IMPORTANT */
+    object-fit:contain;
+    object-position:center;
+
+    background:#39a6e6;
+
+    border:5px solid #4e8cff;
+
+    padding:12px;
+
+    box-shadow:
+        0 0 35px rgba(78,140,255,.35),
+        0 0 70px rgba(78,140,255,.15);
+
+    transition:.35s;
 }
 
-.about-image img:hover {
-  transform: scale(1.05);
+.about-image img:hover{
+
+    transform:scale(1.03);
+
 }
 
-.about-text {
-  flex: 1 1 500px;
-  text-align: left;
+/* ==========================================
+   TEXT
+========================================== */
+
+.about-text{
+
+    flex:1;
+    max-width:650px;
+
 }
 
-.about-text h1 {
-  font-size: 2.5rem;
-  color: #60a5fa;
-  margin-bottom: 10px;
+.about-text h1{
+
+    font-size:56px;
+    color:#fff;
+    margin-bottom:12px;
+    font-weight:700;
+
 }
 
-.about-text .name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #a5b4fc;
-  margin-bottom: 20px;
+.name{
+
+    font-size:36px;
+    color:#4e8cff;
+    margin-bottom:22px;
+    font-weight:700;
+
 }
 
-.about-text p {
-  font-size: 1rem;
-  color: #d1d5db;
-  line-height: 1.7;
-  margin-bottom: 20px;
+.about-text p{
+
+    color:#d6d6d6;
+    font-size:17px;
+    line-height:2;
+    margin-bottom:22px;
+    text-align:justify;
+
 }
 
-.btn-linkedin {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #2563eb;
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn-linkedin{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:15px 35px;
+
+    background:linear-gradient(135deg,#5a6cff,#1734ff);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-.btn-linkedin:hover {
-  background-color: #1e40af;
-  transform: scale(1.05);
+.btn-linkedin:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(23,52,255,.35);
+
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
+/* ==========================================
+   AI SECTION
+========================================== */
 
-  .about-text {
-    text-align: center;
-  }
+.ai-section{
 
-  .about-image img {
-    width: 220px;
-    height: 220px;
-  }
+    background:linear-gradient(135deg,#0b0e17,#101826,#0b0e17);
+
+    color:#fff;
+
+    padding:90px 8%;
+
+    text-align:center;
+
 }
 
+.ai-section h2{
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+    font-size:42px;
+
+    margin-bottom:10px;
+
 }
 
+.ai-subtitle{
 
-/* ===== Responsive Fix for Mobile (About Page) ===== */
-@media (max-width: 768px) {
-  .about-section {
-    padding: 60px 20px;
-  }
+    color:#c7c7c7;
 
-  .about-container {
-    flex-direction: column;
-    gap: 30px;
-  }
+    font-size:16px;
 
-  .about-image img {
-    width: 180px;
-    height: 180px;
-  }
+    margin-bottom:40px;
 
-  .about-text h1 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-  }
+}
 
-  .about-text .name {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
+.ai-container{
 
-  .about-text p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
+    display:flex;
 
-  .btn-linkedin {
-    padding: 10px 22px;
-    font-size: 0.95rem;
-  }
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.ai-input{
+
+    width:650px;
+
+    max-width:90%;
+
+    padding:16px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#182233;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.ai-input::placeholder{
+
+    color:#b8b8b8;
+
+}
+
+.ai-button{
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#5a6cff,#1734ff);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ai-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.ai-response{
+
+    max-width:820px;
+
+    margin:30px auto;
+
+    background:#182233;
+
+    padding:22px;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    text-align:left;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.about-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.about-text{
+
+    max-width:100%;
+
+}
+
+.about-text p{
+
+    text-align:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about-image img{
+
+    width:250px;
+    height:250px;
+
+}
+
+.about-text h1{
+
+    font-size:42px;
+
+}
+
+.name{
+
+    font-size:30px;
+
+}
+
+.about-text p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+.ai-input{
+
+    width:100%;
+
+}
+
 }
